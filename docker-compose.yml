@@ -1,0 +1,35 @@
+version: '3' 
+services:
+  web:
+    build: app
+    ports:
+      - "5000:5000"
+    #command: ["./docker-entrypoint.sh", "database:3308", "--", "./docker_start.sh"]
+    #command: flask_api.py exec rails s -p 5000 -b '0.0.0.0'
+    #volumes:
+    #  - .:/code
+    depends_on:
+      - database
+    links:
+      - database
+  database:
+    build: server
+    #image: mysql:latest
+    environment:
+      - MYSQL_ROOT_HOST=0.0.0.0
+      - MYSQL_USER=root
+      - MYSQL_ROOT_PASSWORD=1234
+      #MYSQL_PORT: 3306
+      #MYSQL_PASSWORD: 1234
+      - MYSQL_DATABASE=db1
+    ports:
+      - "3308:3306"
+    #expose:
+    #  - 3306
+    #host.docker.internal
+    
+  
+
+
+
+    

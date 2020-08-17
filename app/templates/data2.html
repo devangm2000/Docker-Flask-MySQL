@@ -1,0 +1,37 @@
+<p>Your query result-</p>
+
+<p>{% for y in x %}{{y}}{% endfor %}</p>
+
+<table border = 1>
+    {% for data in c %}
+  <tr>
+    <td>{{data[0]}} </td>
+    <td> {{data[1]}} </td>
+    <td> {{data[2]}} </td>
+    <td> {{data[3]}} </td>
+    <td> {{data[4]}} </td>
+    <td> {{data[5]}} </td>
+    <td> {{data[6]}} </td>
+    <td> {{data[7]}} </td>
+    <td> {{data[8]}} </td>
+    <td> {{data[9]}} </td>
+    <td> {{data[10]}} </td>
+  </tr>
+  {% endfor %}
+</table>
+<!--
+<tr>
+  <th>Date/Time</th>
+  <th>Counter1</th> 
+  <th>Counter2</th>
+  <th>Counter3</th>
+  <th>Counter4</th>
+  <th>Counter5</th>
+  <th>KPI1</th>
+  <th>KPI2</th>
+  <th>KPI3</th>
+  <th>KPI4</th>
+  <th>KPI5</th>
+</tr>
+
+>
