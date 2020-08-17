@@ -16,7 +16,8 @@ app =Flask(__name__,template_folder='templates')
 
 app.config['MYSQL_HOST'] = 'database'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '1234'
+app.config['MYSQL_PASSWORD'] = ' '
+#enter your mysql pwd
 app.config['MYSQL_DB'] = 'db1'
 app.config['MYSQL_PORT'] = 3308
 mysql = MySQL(app)
